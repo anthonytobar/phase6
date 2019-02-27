@@ -1,44 +1,37 @@
-<!-- notice how both the opening <html> tag and the closing </html> tag are NOT indented so you can clearly see the start and end of the code -->
 <html>
-	<!-- the <head> section is for all the information that is needed by the browser but does NOT show up on the page -->
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Displaying Rows & Columns</title>
+		<title>Cycling Images</title>
 		<link rel="stylesheet" href="style.css" />
-		<script src="script.js"></script>
 	</head>
-	<!-- the <body> section is for all the content that is actually displayed on the page -->
+
 	<body>
-		<div class="row1">
-			<div class="box green">
-				<img src="image/Sick.png" class="restrict-img-size" id="change1" onclick="nextImage(this)"/>
+		<!-- TOP ROW -->
+		<div class="row">
+			<!-- FIRST SLOT -->
+			<div class="col center-content">
+				<img src="images/cherry_slot.PNG" class="restrict-img-size" id="slot1" onclick="nextImage(this)"/>
 			</div>
-			<div class="box black">
-				<img src="image/dazed3.jpg" class="restrict-img-size" id="change2" onclick="nextImage1(this)"/>
+			<!-- SECOND SLOT -->
+			<div class="col center-content">
+				<img src="images/lemon_slot.PNG" class="restrict-img-size" id="slot2" onClick="nextImage1(this)"/>
 			</div>
-			<div class="box green">
-				<img src="image/Sick.png" class="restrict-img-size" id="change3" onClick="nextImage2(this)"/>
-			</div>
-		</div>
-		<div class="row1">
-			<div class="box black">
-				<img src="image/dazed3.jpg" class="restrict-img-size"/>
-			</div>
-			<div class="box green">
-				<img src="image/dazed2.jpg" class="restrict-img-size"/>
-			</div>
-			<div class="box black">
-				<img src="image/dazed2.jpg" class="restrict-img-size"/>
+			<!-- THIRD SLOT -->
+			<div class="col center-content">
+				<img src="images/orange_slot.PNG" class="restrict-img-size" id="slot3" onClick="nextImages(this)"/>
 			</div>
 		</div>
-		<div class="row2">
-			<div class="box green"></div>
-			<div class="box black">
-				<img src="" class="button restrict-img-size" onclick="checkPosition(this)"/>
-			</div>
-			<div class="box green"></div>
+		
+		<!-- BOTTOM ROW -->
+		<div class="row center-content">
+			<img src="images/jackpot.png" class="button restrict-img-size" onclick="checkConfiguration(this)"/>
 		</div>
+		
 		<audio src="sounds/winner.mp3" type="audio/mp3" id="you-win"></audio>
+		
+		<script src="script.js"></script>
 	</body>
+	
 </html>

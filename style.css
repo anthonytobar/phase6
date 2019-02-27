@@ -1,42 +1,46 @@
 body {
+	width: 60vw;
 	height: 100vh;
-	width: 100vw;
+	margin: 0 20vw 0 20vw;
 	display: block;
-	margin: 0;
 }
-
-/* When writing CSS classes it is VERY important that you use hyphen delimited strings (square-div and NOT squareDiv) */
-/* Addtionally, you should know what the class does just by looking at the name (the name should be DESCRIPTIVE) */
-/* When thinking about sizing elements on your page, there are many different units you can use = https://www.w3schools.com/cssref/css_units.asp */
-.row1 {
-	height: 40%;
-	width: 100%;
+/* Use this class on the PARENT of whatever you are trying to center; remember that the PARENT tells the CHILD what to do! */
+/* NOTE: Centering content only works when the display property is "flex"! */
+.center-content {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.row2 {
-	height: 20%;
-	width: 100%;
-	display: flex;
-}
-
-.box {
-	height: 100%;
-	width: calc(100%/3);
-	display: flex ;
-}
-
+/* Use this class on your image to restrict the size so it stays completely within it's parent div */
 .restrict-img-size {
 	max-height: 99%;
 	max-width: 99%;
 }
-/* When possible, organize CSS classes in alphabetical order */
-.black {
-	background-color: #000000;
+
+.col {
+	height: 100%;
+	width: calc(100%/3);
 }
 
-.green {
-	background-color: #7CFC00;
+.row {
+	height: 50%;
+	width: 100%;
+	display: flex;
 }
 
+.opaque {
+	opacity: 0.25;
+}
 
+.no-cursor:hover {
+	cursor: default;
+}
+
+.button:active {
+	transform: scale(0.95, 0.95);
+}
+
+.gray {
+	background-color: #E8DEDF;
+}
