@@ -5,12 +5,15 @@ var d = document.getElementById("change4");
 var e = document.getElementById("change5");
 var f = document.getElementById("change6");
 
+var audio = document.getElementById("you-win");
+
+
 function nextImage(el){
 	if (el.src.match("image/zombies.jpg")){
 		el.src = "image/wow.jpg";
 	} else if (el.src.match("image/wow.jpg")){
-		el.src = "image/dazed2.jpg";
-	} else if (el.src.match("image/dazed2.jpg")){
+		el.src = "image/run.jpg";
+	} else if (el.src.match("image/run.jpg")){
 		el.src = "image/zombies.jpg";
 	} else if (el.src.match("image/zombies.jpg")){
 		el.src = "image/wow.jpg";
@@ -25,8 +28,8 @@ function nextImage1(el){
 	if (el.src.match("image/wow.jpg")){
 		el.src = "image/zombies.jpg";
 	} else if (el.src.match("image/zombies.jpg")){
-		el.src = "image/dazed2.jpg";
-	} else if (el.src.match("image/dazed2.jpg")){
+		el.src = "image/run.jpg";
+	} else if (el.src.match("image/run.jpg")){
 		el.src = "image/zombies.jpg";
 	} else if (el.src.match("image/zombies.jpg")){
 		el.src = "image/wow.jpg";
@@ -39,11 +42,11 @@ function nextImage2(el){
 	if (el.src.match("image/zombies.jpg")){
 		el.src = "image/wow.jpg";
 	} else if (el.src.match("image/wow.jpg")){
-		el.src = "image/dazed2.jpg";
-	} else if (el.src.match("image/dazed2.jpg")){
+		el.src = "image/run.jpg";
+	} else if (el.src.match("image/run.jpg")){
 		el.src = "image/zombies.jpg";
 	} else if (el.src.match("image/zombies.jpg")){
-		el.src = "image/dazed.png";
+		el.src = "image/wow.jpg";
 	} else if (el.src.match("image/wow.jpg")){
 		el.src = "image/zombies.jpg";
 	} else {
@@ -66,14 +69,14 @@ function nextImage3(el){
 }
 
 function nextImage4(el){
-	if (el.src.match("image/run.png")){
-		el.src = "image/wow.jpg";
-	} else if (el.src.match("image/wow.jpg")){
-		el.src = "image/run.jpg";
-	} else if (el.src.match("image/run.jpg")){
+	if (el.src.match("image/wow.jpg")){
 		el.src = "image/zombies.jpg";
 	} else if (el.src.match("image/zombies.jpg")){
-		el.src = "image/dazed.png";
+		el.src = "image/run.jpg";
+	} else if (el.src.match("image/run.jpg")){
+		el.src = "image/wow.jpg";
+	} else if (el.src.match("image/zombies.jpg")){
+		el.src = "image/wow.jpg";
 	} else if (el.src.match("image/wow.jpg")){
 		el.src = "image/zombies.jpg";
 	} else {
@@ -112,4 +115,19 @@ function nextImage5(el){
 	} else {
 		//do nothing
 	}
+}
+
+function  checkConfiguration(el){
+	if(a.src.match("image/run.jpg") && b.src.match("image/run.jpg") && c.src.match("image/run.jpg") && d.src.match("image/run.jpg") && e.src.match("image/run.jpg") && f.src.match("image/run.jpg")){
+		a.classList.add("hide");
+		b.classList.add("hide");
+		c.classList.add("hide");
+		d.classList.add("hide");
+		e.classList.add("hide");
+		f.classList.add("hide");
+		audio.play();
+	} else {
+		
+	}
+	// when the JACKPOT! button is clicked, play the slot machine sound
 }
